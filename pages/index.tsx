@@ -43,14 +43,14 @@ function Home() {
         <h1 className="h1 mb-4 max-w-[17ch] md:mb-7">
           <FormattedMessage
             id="home.hero.headline"
-            defaultMessage="Social networking that's not for sale."
+            defaultMessage="Reddit without u/spez and the ads."
           />
         </h1>
 
         <p className="sh1 mb-11 max-w-[50ch]">
           <FormattedMessage
             id="home.hero.body"
-            defaultMessage="Your home feed should be filled with what matters to you most, not what a corporation thinks you should see. Radically different social media, back in the hands of the people."
+            defaultMessage="A reddit look-a-like without its ads. A reddit without greedy owners. This is what reddit should have been all along."
           />
         </p>
 
