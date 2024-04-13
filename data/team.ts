@@ -11,11 +11,18 @@ export type TeamMember = {
 
 const team: TeamMember[] = [
   {
-    image: require("../public/team/eugen-rochko.jpg"),
     name: "Eugen Rochko",
     position: "Founder, CEO",
     socials: {
       mastodon: "https://mastodon.social/@Gargron",
+    },
+  },
+
+  {
+    name: "Renaud Chaput",
+    position: "CTO",
+    socials: {
+      mastodon: "https://oisaur.com/@renchap",
     },
   },
 
@@ -25,17 +32,6 @@ const team: TeamMember[] = [
     socials: {
       mastodon: "https://mastodon.social/@mellifluousbox",
     },
-  },
-
-  {
-    image: require("../public/team/inga-driksne.jpg"),
-    name: "Inga Driksne",
-    position: "Operations/Talent",
-  },
-
-  {
-    name: "Julie Inouye",
-    position: "Communications",
   },
 
   {
@@ -73,6 +69,14 @@ const team: TeamMember[] = [
   {
     name: "Timothy Campbell",
     position: "DevOps",
+  },
+
+  {
+    name: "Andy Piper",
+    position: "DevRel",
+    socials: {
+      mastodon: "https://macaw.social/@andypiper",
+    },
   },
 
   {

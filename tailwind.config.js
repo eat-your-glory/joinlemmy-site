@@ -72,7 +72,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["Manrope", ...defaultTheme.fontFamily.sans],
+        sans: ["Manrope", "-apple-system", "BlinkMacSystemFont", "\"Segoe UI\"", "Roboto", "\"Helvetica Neue\"", "Arial", "\"Noto Sans\"", "sans-serif", "\"Apple Color Emoji\"", "\"Segoe UI Emoji\"", "\"Segoe UI Symbol\"", "\"Noto Color Emoji\""],
       },
       fontWeight: {
         extranormal: 450,
@@ -102,7 +102,6 @@ const config = {
   plugins: [
     /** CSS Logical Properties https://github.com/stevecochrane/tailwindcss-logical */
     require("tailwindcss-logical"),
-    require("@tailwindcss/line-clamp"),
     plugin(function ({ addVariant }) {
       /** A good default for hover states */
       addVariant("hocus", ["&:hover", "&:focus-visible"])

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { FormattedMessage, useIntl } from "react-intl"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import Head from "next/head"
 import classnames from "classnames"
 import { useKeenSlider } from "keen-slider/react"
@@ -55,17 +55,18 @@ function Home() {
         </p>
 
         <div className="flex justify-center gap-12">
-          <LinkButton size="large" href="/apps">
+          <LinkButton size="large" href="https://mastodon.social/auth/sign_up">
             <FormattedMessage
-              id="home.get_the_app"
-              defaultMessage="Get the app"
+              id="home.join_now"
+              defaultMessage="Join {domain}"
+              values={{ domain: 'mastodon.social' }}
             />
           </LinkButton>
 
           <LinkButton size="large" href="/servers" light borderless>
             <FormattedMessage
-              id="home.create_account"
-              defaultMessage="Create account"
+              id="home.pick_another_server"
+              defaultMessage="Pick another server"
             />
           </LinkButton>
         </div>
@@ -76,11 +77,10 @@ function Home() {
       <Sponsors sponsors={{ platinum, additionalFunding }} />
       <Head>
         <title>
-          Mastodon -{" "}
-          {intl.formatMessage({
+          {`Mastodon - ${intl.formatMessage({
             id: "home.page_title",
             defaultMessage: "Decentralized social media",
-          })}
+          })}`}
         </title>
 
         <meta
@@ -106,6 +106,9 @@ function Home() {
               "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform.",
           })}
         />
+
+        <link rel="me" href="https://mastodon.social/@MastodonEngineering" />
+        <link rel="me" href="https://mastodon.social/@ServerHighlights" />
       </Head>
     </Layout>
   )
@@ -365,6 +368,7 @@ const WhyMastodon = () => {
                     "rounded-[50%] p-1.5 " +
                     (currentSlide === idx ? "bg-blurple-500" : "bg-gray-3")
                   }
+                  aria-label="Go to slide"
                 ></button>
               )
             })}
@@ -437,6 +441,7 @@ const Testimonials = ({ testimonials }) => {
                       "rounded-[50%] p-1.5 " +
                       (currentSlide === idx ? "bg-blurple-500" : "bg-gray-3")
                     }
+                    aria-label="Go to slide"
                   ></button>
                 )
               })}
@@ -475,17 +480,24 @@ const Sponsors = ({ sponsors }) => {
           </p>
 
           <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-            <LinkButton href="https://sponsor.joinmastodon.org/" size="large">
+            <LinkButton href="https://patreon.com/mastodon" size="large">
               <FormattedMessage
-                id="sponsors.become_a_sponsor"
-                defaultMessage="Become a sponsor"
+                id="sponsors.donate_on_patreon"
+                defaultMessage="Donate on Patreon"
+              />
+            </LinkButton>
+
+            <LinkButton href="https://donate.stripe.com/00g5l42h8ezY3YcaEE" size="large">
+              <FormattedMessage
+                id="sponsors.donate_directly"
+                defaultMessage="Donate directly"
               />
             </LinkButton>
 
             <LinkButton href="/sponsors" light size="large">
               <FormattedMessage
-                id="credits.view_sponsors"
-                defaultMessage="View sponsors"
+                id="sponsors.learn_more"
+                defaultMessage="Learn more"
               />
             </LinkButton>
           </div>

@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { FormattedMessage } from "react-intl"
 
 export type AppCardProps = {
@@ -6,13 +6,15 @@ export type AppCardProps = {
   icon: string
   url: URL
   paid: boolean
+  category: string
+  categoryLabel: string
 }
 
 /**
  * Renders a card with app data.
  * Layout (width, height, positioning) can be set from the parent.
  */
-export const AppCard = ({ name, icon, url, paid }) => {
+export const AppCard = ({ name, icon, url, paid, category, categoryLabel }) => {
   return (
     <a
       key={`${url} ${name}`}
@@ -26,6 +28,7 @@ export const AppCard = ({ name, icon, url, paid }) => {
       </div>
       <div className="flex flex-auto flex-col">
         <span className="b4 block text-gray-1">
+          {categoryLabel},{" "}
           {paid ? (
             <FormattedMessage id="apps.paid" defaultMessage="Paid" />
           ) : (

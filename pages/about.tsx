@@ -4,7 +4,7 @@ import Hero from "../components/Hero"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import Layout from "../components/Layout"
 import heroImage from "../public/illustrations/apps_hero_desktop.png"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { FormattedDate, FormattedMessage } from "react-intl"
 import Link from "next/link"
 import { useQuery } from "@tanstack/react-query"
@@ -112,9 +112,13 @@ const About = () => (
                       {member.socials && (
                         <a
                           href={member.socials.mastodon}
+                          rel="me"
                           className="b2 ml-2 block flex-shrink-0 text-blurple-600 hover:text-blurple-500"
                         >
-                          <LogoWhite className="h-[1em] w-[1em]" fill="currentColor" />
+                          <LogoWhite
+                            className="h-[1em] w-[1em]"
+                            fill="currentColor"
+                          />
                         </a>
                       )}
                     </div>
@@ -133,6 +137,16 @@ const About = () => (
               <h2 className="h3 mb-4">Reports</h2>
 
               <ul className="list-disc pl-3">
+                <li>
+                  <a
+                    href="/reports/Mastodon Annual Report 2022.pdf"
+                    className="b2 block hover:text-blurple-500"
+                  >
+                    <span className="h5 block">2022</span>
+                    <span className="text-gray-2">PDF, 6 MB</span>
+                  </a>
+                </li>
+
                 <li>
                   <a
                     href="/reports/Mastodon Annual Report 2021.pdf"

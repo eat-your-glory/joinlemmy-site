@@ -14,6 +14,11 @@ const sponsors = {
       name: "Datadog",
     }, // Custom/other
     {
+      url: "https://www.postmarkapp.com?utm_source=mastodon&utm_medium=referral&utm_campaign=2023_mastodon-sponsorship",
+      logo: require("../public/sponsors/postmark.svg"),
+      name: "Postmark",
+    }, // Custom/other
+    {
       url: "https://mobi.com/",
       logo: require("../public/sponsors/mobi-across-big.png"),
       name: "Mobi",
@@ -24,9 +29,9 @@ const sponsors = {
       name: "Medium",
     }, // Custom
     {
-      url: "https://oak.is/",
-      logo: require("../public/sponsors/oak.svg"),
-      name: "Oak Studios",
+      url: "https://lickability.com/",
+      logo: require("../public/sponsors/lickability-logo.svg"),
+      name: "Lickability",
     }, // Custom/other
     {
       url: "https://www.ramotion.com/agency/ui-ux-design",
@@ -275,15 +280,30 @@ const sponsors = {
       logo: require("../public/sponsors/bairesdev.png"),
       name: "BairesDev",
     }, // Custom
+    {
+      url: "https://www.happeo.com",
+      logo: require("../public/sponsors/happeo.png"),
+      name: "Happeo intranet",
+    }, // Custom
+    {
+      url: "https://nongamstopcasinos.net/gb/",
+      logo: require("../public/sponsors/nongamstop.png"),
+      name: "https://nongamstopcasinos.net/gb/",
+    }, // Custom
+    {
+      url: "https://www.grabmyessay.com/pay-for-essay",
+      logo: require("../public/sponsors/gme.jpg"),
+      name: "Grabmyessay",
+    }, // Custom
   ],
   silver: [
     {
       url: "https://ichiji.social/@tnzk",
       logo: require("../public/sponsors/tnzk.png"),
       name: "Kyohei Hamaguchi / @tnzk",
-      nofollow: false
+      nofollow: false,
     },
-    ...patreonData.silver
+    ...patreonData.silver,
   ],
   generalHighlighted: patreonData.generalHighlighted,
   general: patreonData.general,
